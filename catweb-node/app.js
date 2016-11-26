@@ -16,12 +16,11 @@ var express = require('express'),
         "http://ak-hdl.buzzfed.com/static/2013-10/enhanced/webdr03/15/10/anigif_enhanced-buzz-11980-1381846269-1.gif"
     ]
 
-app.set('view engine', 'pug')
+app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'pug');
 
 app.get('/', function (req, res) {
     var url = images[Math.floor(Math.random() * images.length)];
-    //request({url:url})
-    //.pipe(res)
     res.render(
         'index',
         { title: 'Catweb', url: url})
