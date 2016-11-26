@@ -1,0 +1,15 @@
+{
+  "name": "catweb",
+  "version": "0.0.1",
+  "description": "Node.js example on Docker",
+  "author": "First Last <first.last@example.com>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "request": "^2.79.0",
+    "pug": "2.0.0-beta6"
+  }
+}
